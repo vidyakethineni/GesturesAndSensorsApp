@@ -1,0 +1,102 @@
+<!-- activity_sensor.xml -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.project10.SensorViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@{viewModel.title}"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleTextView"
+            android:layout_marginTop="16dp"
+            android:text="@{viewModel.name}"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/locationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTextView"
+            android:layout_marginTop="8dp"
+            android:text="@{viewModel.location}"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/cityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/locationTextView"
+            android:layout_marginTop="8dp"
+            android:text="@{viewModel.city}"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/stateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cityTextView"
+            android:layout_marginTop="8dp"
+            android:text="@{viewModel.state}"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/temperatureTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stateTextView"
+            android:layout_marginTop="25dp"
+            android:text="@{viewModel.temperature}"
+            android:textSize="16sp"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/humidityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/temperatureTextView"
+            android:layout_marginTop="8dp"
+            android:text="@{viewModel.humidity}"
+            android:textSize="16sp"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/pressureTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/humidityTextView"
+            android:layout_marginTop="8dp"
+            android:text="@{viewModel.airPressure}"
+            android:textSize="16sp"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/gestureButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pressureTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Gesture Playground"/>
+
+    </RelativeLayout>
+</layout>

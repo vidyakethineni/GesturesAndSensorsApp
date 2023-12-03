@@ -1,0 +1,30 @@
+<!-- res/navigation/nav_graph.xml -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sensorActivity">
+
+    <activity
+        android:id="@+id/sensorActivity"
+        android:name="com.example.project10.SensorActivity">
+        <action
+            android:id="@+id/action_sensor_to_gesture"
+            app:destination="@id/gestureActivity" />
+    </activity>
+
+    <activity
+        android:id="@+id/gestureActivity"
+        android:name="com.example.project10.GestureActivity" />
+
+    <fragment
+        android:id="@+id/topFragment"
+        android:name="com.example.project10.TopFragment"
+        tools:layout="@layout/fragment_top" />
+
+    <fragment
+        android:id="@+id/bottomFragment"
+        android:name="com.example.project10.BottomFragment"
+        tools:layout="@layout/fragment_bottom" />
+
+</navigation>
